@@ -6,14 +6,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Booleans")] 
-    [SerializeField] private bool isCanMove;
-    [SerializeField] private bool isCanSlide;
+    [SerializeField] public bool isCanMove;
+    [SerializeField] public bool isCanSlide;
 
     [Header("Values")] 
-    [SerializeField] private float movementSpeed;
-    [SerializeField] private float slideSensivity;
+    [SerializeField] public float movementSpeed;
+    [SerializeField] public float slideSensivity;
 
     private float inputHorizontal;
+    
 
     private void Update()
     {
@@ -24,6 +25,14 @@ public class PlayerMovement : MonoBehaviour
             _direction.y = slideSensivity * inputHorizontal;
             
             transform.Rotate(_direction * Time.deltaTime);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (isCanMove)
+        {
+            transform.Translate(Vector3.forward * movementSpeed * Time.fixedDeltaTime);
         }
     }
 }
