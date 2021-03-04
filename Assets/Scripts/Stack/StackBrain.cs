@@ -26,7 +26,7 @@ public class StackBrain : MonoBehaviour
 
     private void CheckHaveStack()
     {
-        if (collectedList.Count > 0)
+        if (collectedList.Count >= 1)
         {
             isHaveStack = true;
         }
@@ -34,8 +34,6 @@ public class StackBrain : MonoBehaviour
         {
             isHaveStack = false;
         }
-        
-        Debug.Log("[StackBrain][CheckHaveStack] isHaveStack : " + isHaveStack);
         playerBrain.IsHaveStack = isHaveStack;
         
     }

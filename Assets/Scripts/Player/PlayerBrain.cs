@@ -17,9 +17,9 @@ public class PlayerBrain : MonoBehaviour
 
     [Header("References")] [SerializeField]
     private Animator playerAnimator;
-
     [SerializeField] private Rigidbody playerRigidbody;
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private StackBrain stackBrain;
 
     [Header("Values")] 
     [SerializeField] private float downRaycastDistance;
@@ -63,6 +63,7 @@ public class PlayerBrain : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody>();
         playerMovement = GetComponent<PlayerMovement>();
+        stackBrain = GetComponentInChildren<StackBrain>();
     }
 
     private void Update()
@@ -73,7 +74,7 @@ public class PlayerBrain : MonoBehaviour
         RaycastHit _hit;
         bool _isHit = Physics.Raycast(transform.position, Vector3.down, out _hit, downRaycastDistance);
 
-        if (_isHit && (_hit.transform.tag == "Ground" || _hit.transform.tag == "Stack"))
+        if (_isHit && (_hit.transform.CompareTag("Ground") || _hit.transform.CompareTag("Stack")))
         {
             isGrounded = true;
         }
@@ -82,25 +83,25 @@ public class PlayerBrain : MonoBehaviour
             isGrounded = false;
         }
 
-        /**
-         * Set State
-         */
-        if (isGrounded && isRunning)
+        if (!isGrounded && isHaveStack)
         {
-            currentPlayerState = PlayerState.Running;
-        }
-        else if (!isGrounded && isRunning)
-        {
-            currentPlayerState = PlayerState.Falling;
-        }
-        else if (isRunning && isGrounded)
-        {
-            currentPlayerState = PlayerState.Idle;
+            //Lost Stack
+            Stack lastStack = stackBrain.collectedList[stackBrain.collectedList.Count - 1];
+            lastStack.transform.parent = null;
+            Destroy(lastStack.stackJoint);
+            lastStack.stackRigidbody.isKinematic = true;
+            lastStack.transform.position = transform.position + ((Vector3.forward * 0.11f) + (Vector3.down * 0.1f));
+            lastStack.transform.LookAt(Vector3.forward);
+
+            stackBrain.collectedList.Remove(lastStack);
+            stackBrain.OnLostStack();
         }
 
-        /**
-         * Set Gravity
-         */
+        if (!isGrounded && !isHaveStack)
+        {
+            playerAnimator.SetBool("isFalling", true);
+        }
+        
     }
 
 }

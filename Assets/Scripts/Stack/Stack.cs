@@ -10,10 +10,16 @@ public class Stack : MonoBehaviour
 
     public Rigidbody stackRigidbody;
     public BoxCollider stackCollider;
+    public FixedJoint stackJoint;
 
     private void OnEnable()
     {
         stackRigidbody = GetComponent<Rigidbody>();
         stackCollider = GetComponent<BoxCollider>();
+    }
+
+    private void Start()
+    {
+        stackJoint = GetComponent<FixedJoint>();
     }
 }
