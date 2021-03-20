@@ -17,7 +17,7 @@ public class StackBrain : MonoBehaviour
 
     private void Start()
     {
-        playerBrain = GetComponentInParent<PlayerBrain>();
+        //playerBrain = GetComponentInParent<PlayerBrain>();
 
         OnCollectStack += CheckHaveStack;
 

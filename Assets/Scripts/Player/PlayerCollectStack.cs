@@ -9,12 +9,15 @@ public class PlayerCollectStack : MonoBehaviour
     [Header("References")] 
     [SerializeField] private StackBrain _stackBrain;
     [SerializeField] private Material collectedMaterial;
+    [SerializeField] private Rigidbody playerRb;
+    [SerializeField] private Transform collectedSocket;
 
     private Stack _lastAdded;
 
     private void Start()
     {
-        _stackBrain.GetComponentInChildren<StackBrain>();
+        // _stackBrain.GetComponentInChildren<StackBrain>();
+        // playerRb = GetComponent<Rigidbody>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,8 +35,9 @@ public class PlayerCollectStack : MonoBehaviour
             other.gameObject.name = "Stack " + _stack.stackID;
             other.gameObject.tag = "Stack";
 
-            other.transform.parent = _stackBrain.gameObject.transform;
+            other.transform.parent = collectedSocket;
             other.transform.localPosition = (Vector3.up * _stack.stackID * 0.12f);
+            other.transform.localRotation = Quaternion.Euler(0, 90f, 0);
             FixedJoint _joint = other.gameObject.AddComponent<FixedJoint>();
 
             _stack.stackCollider.isTrigger = false;
@@ -46,6 +50,8 @@ public class PlayerCollectStack : MonoBehaviour
             else
             {
                 _stack.stackRigidbody.isKinematic = true;
+                _stack.stackRigidbody.constraints = RigidbodyConstraints.FreezeAll;
+                _joint.connectedBody = playerRb;
             }
 
             _lastAdded = _stack;

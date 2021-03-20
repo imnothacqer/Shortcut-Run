@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\imnohacQer\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\imnohacQer\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Shortcut-Run.2044404809.00" t="ExcludeRecursive" />
+    <e p="D:\Unity\Shortcut-Run" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Player" t="Include">
+            <e p="PlayerBrain.cs" t="Include" />
+            <e p="PlayerCollectStack.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+          </e>
+          <e p="Stack" t="Include">
+            <e p="Stack.cs" t="Include" />
+            <e p="StackBrain.cs" t="Include" />
+          </e>
+        </e>
+        <e p="ThirtyPart" t="Include">
+          <e p="Plugins" t="Include">
+            <e p="Demigiant" t="Include">
+              <e p="DOTween" t="Include">
+                <e p="Modules" t="Include">
+                  <e p="DOTweenModuleAudio.cs" t="Include" />
+                  <e p="DOTweenModulePhysics.cs" t="Include" />
+                  <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                  <e p="DOTweenModuleSprite.cs" t="Include" />
+                  <e p="DOTweenModuleUI.cs" t="Include" />
+                  <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                  <e p="DOTweenModuleUtils.cs" t="Include" />
+                </e>
+                <e p="README.txt" t="Include" />
+              </e>
+            </e>
+            <e p="SimpleInput" t="Include">
+              <e p="Editor" t="Include">
+                <e p="AxisInputDrawer.cs" t="Include" />
+                <e p="BaseInputDrawer.cs" t="Include" />
+                <e p="ButtonInputDrawer.cs" t="Include" />
+                <e p="KeyInputDrawer.cs" t="Include" />
+                <e p="MouseButtonInputDrawer.cs" t="Include" />
+                <e p="SimpleInput.Editor.asmdef" t="Include" />
+              </e>
+              <e p="README.txt" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="AxisInputs" t="Include">
+                  <e p="AxisInputKeyboard.cs" t="Include" />
+                  <e p="AxisInputMouse.cs" t="Include" />
+                  <e p="AxisInputMoveGesture.cs" t="Include" />
+                  <e p="AxisInputPinchGesture.cs" t="Include" />
+                  <e p="AxisInputRotateGesture.cs" t="Include" />
+                  <e p="AxisInputSwipeGesture.cs" t="Include" />
+                  <e p="AxisInputUI.cs" t="Include" />
+                  <e p="AxisInputUIArrows.cs" t="Include" />
+                  <e p="Dpad.cs" t="Include" />
+                  <e p="Joystick.cs" t="Include" />
+                  <e p="SteeringWheel.cs" t="Include" />
+                  <e p="Touchpad.cs" t="Include" />
+                </e>
+                <e p="ButtonInputs" t="Include">
+                  <e p="ButtonInputKeyboard.cs" t="Include" />
+                  <e p="ButtonInputSwipeGesture.cs" t="Include" />
+                  <e p="ButtonInputUI.cs" t="Include" />
+                </e>
+                <e p="Core" t="Include">
+                  <e p="BaseInput.cs" t="Include" />
+                  <e p="ISimpleInputDraggable.cs" t="Include" />
+                  <e p="ISimpleInputDraggableMultiTouch.cs" t="Include" />
+                  <e p="NonDrawingGraphic.cs" t="Include" />
+                  <e p="SelectivePointerInput.cs" t="Include" />
+                  <e p="SimpleInputDragListener.cs" t="Include" />
+                  <e p="SimpleInputMultiDragListener.cs" t="Include" />
+                  <e p="SimpleInputUtils.cs" t="Include" />
+                  <e p="SwipeGestureBase.cs" t="Include" />
+                  <e p="UnityInputProvider.cs" t="Include" />
+                </e>
+                <e p="KeyInputs" t="Include">
+                  <e p="KeyInputKeyboard.cs" t="Include" />
+                  <e p="KeyInputSwipeGesture.cs" t="Include" />
+                  <e p="KeyInputUI.cs" t="Include" />
+                </e>
+                <e p="MouseButtonInputs" t="Include">
+                  <e p="MouseButtonInputKeyboard.cs" t="Include" />
+                  <e p="MouseButtonInputSwipeGesture.cs" t="Include" />
+                  <e p="MouseButtonInputUI.cs" t="Include" />
+                </e>
+                <e p="SimpleInput.cs" t="Include" />
+                <e p="SimpleInputHelper.cs" t="Include" />
+              </e>
+              <e p="SimpleInput.Runtime.asmdef" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Shortcut-Run.sln" t="IncludeFlat" />
+      <e p="SimpleInput.Editor.csproj" t="IncludeRecursive" />
+      <e p="SimpleInput.Runtime.csproj" t="IncludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

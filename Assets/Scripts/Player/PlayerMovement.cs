@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float movementSpeed;
     [SerializeField] public float slideSensivity;
 
+    public Transform PlayerBody;
+
     private float inputHorizontal;
     
 
@@ -32,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isCanMove)
         {
-            transform.Translate(Vector3.forward * movementSpeed * Time.fixedDeltaTime);
+            transform.Translate(transform.forward * movementSpeed * Time.fixedDeltaTime);
         }
     }
 }

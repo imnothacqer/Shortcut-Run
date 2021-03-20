@@ -947,6 +947,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 6908084982245931121}
   playerRigidbody: {fileID: 4493978120047829715}
   playerMovement: {fileID: 6908084982245931125}
+  stackBrain: {fileID: 247183203}
   downRaycastDistance: 0.2
   isRunning: 0
   isHaveStack: 0
